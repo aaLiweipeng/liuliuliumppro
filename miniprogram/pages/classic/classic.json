@@ -1,6 +1,8 @@
 {
   "backgroundColor": "#121266",
-  "usingComponents": {},
+  "usingComponents": {
+    "xy-like":"/components/like/index"
+  },
   "enablePullDownRefresh": true,
   "onReachBottomDistance": 50
 }

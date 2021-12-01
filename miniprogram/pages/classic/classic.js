@@ -5,14 +5,24 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    test: 666 
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    wx.request({
+      url: 'https://www.fastmock.site/mock/0f8833e657e4d150460baaf5da523f7b/jiudao/classic/latest',
+      header: {
+        appkey:"98HcsgdJ3mx4Ufcm"
+      },
+      // 请求成功回调， res为服务器返回内容
+      success:(res) => {
+        console.log(res);
+        console.log(this.data.test);
+      }
+    })
   },
 
   /**
