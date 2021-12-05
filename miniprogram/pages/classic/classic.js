@@ -1,6 +1,9 @@
 // pages/classic/classic.js
-import { HTTP } from '../../util/http.js'
-let http = new HTTP()
+// import { HTTP } from '../../util/http.js'
+// let http = new HTTP()
+
+import { ClassicModel } from '../../models/classic.js'
+let classicModel = new ClassicModel()
 
 Page({
 
@@ -15,12 +18,24 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    http.request({
-      url:'classic/latest',
-      success:(res)=>{
-        console.log('classic Page: \n', res)
-      }
+
+    classicModel.getLatest((res)=>{
+      console.log('classic Page \n', 
+        'onLoad classicModel.getLatest --- \n',
+        res);
+        
+      this.setData({
+        classicData:res
+      })
     })
+
+    // http.request({
+    //   url:'classic/latest',
+    //   success:(res)=>{
+    //     console.log('classic Page: \n', res)
+    //   }
+    // })
+
     // wx.request({
     //   url: 'https://www.fastmock.site/mock/0f8833e657e4d150460baaf5da523f7b/jiudao/classic/latest',
     //   header: {

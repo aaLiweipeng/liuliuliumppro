@@ -35,6 +35,8 @@ Component({
         count:count,
         like:!like
       })
+      console.log('like this.data',this.data)
+      console.log('like this.properties',this.properties)
     }
   }
 })

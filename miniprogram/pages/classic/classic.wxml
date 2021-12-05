@@ -1,2 +1,4 @@
 <!--pages/classic/classic.wxml-->
-<xy-like />
+<xy-like 
+  like="{{classicData.like_status}}"
+  count="{{classicData.fav_nums}}"/>
