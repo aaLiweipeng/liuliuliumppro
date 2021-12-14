@@ -3,7 +3,9 @@
 // let http = new HTTP()
 
 import { ClassicModel } from '../../models/classic.js'
+import { LikeModel } from '../../models/likeModel.js'
 let classicModel = new ClassicModel()
+let likeModel = new LikeModel()
 
 Page({
 
@@ -17,8 +19,7 @@ Page({
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function (options) {
-
+  onLoad: function (options) {  
     classicModel.getLatest((res)=>{
       console.log('classic Page \n', 
         'onLoad classicModel.getLatest --- \n',
@@ -47,6 +48,14 @@ Page({
     //     console.log(this.data.test);
     //   }
     // })
+  },
+
+  onLikeClassic:function(event){
+    console.log('Page Classic onLikeClassic --- ', event)
+    let behavior = event.detail.behavior
+    // 调用点赞接口
+    likeModel.like(behavior, this.data.classicData.id, 
+      this.data.classicData.type)
   },
 
   /**

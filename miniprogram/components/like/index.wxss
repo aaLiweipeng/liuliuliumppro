@@ -1,9 +1,10 @@
 /* pages/component/like/index.wxss */
 
-.like{
+.like-container{
   display: inline-flex;
   flex-direction: row;
   padding: 10rpx;
+  width: 90rpx;
 }
 
 .like-image {

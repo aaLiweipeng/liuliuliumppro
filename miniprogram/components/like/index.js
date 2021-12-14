@@ -37,6 +37,13 @@ Component({
       })
       console.log('like this.data',this.data)
       console.log('like this.properties',this.properties)
+
+
+      //自定义事件
+      let behavior = this.properties.like?'like':'cancel'
+      this.triggerEvent('like', {
+        behavior: behavior
+      }, {})
     }
   }
 })

@@ -1,7 +1,8 @@
 {
   "backgroundColor": "#121266",
   "usingComponents": {
-    "xy-like":"/components/like/index"
+    "xy-like":"/components/like/index",
+    "xy-movie":"/components/classic/movie/movie"
   },
   "enablePullDownRefresh": true,
   "onReachBottomDistance": 50

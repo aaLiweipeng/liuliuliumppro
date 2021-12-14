@@ -25,8 +25,10 @@ class HTTP {
       success:(res)=>{
         let code = res.statusCode.toString()
         if (code.startsWith('2')){
-          params.success(res)
-          params.success(res.data)
+          
+          //回调传进来的回调函数 【注意判空】 
+          console.log('http util success res --- ', res);
+          params.success && params.success(res.data)
         }
         else {
           let error_code = res.data.error_code
