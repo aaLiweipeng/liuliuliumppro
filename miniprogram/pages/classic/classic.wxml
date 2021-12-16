@@ -1,8 +1,14 @@
 <!--pages/classic/classic.wxml-->
-<xy-like 
-  bind:like="onLikeClassic"
-  like="{{classicData.like_status}}"
-  count="{{classicData.fav_nums}}"/>
+<view class="header">
+  <xy-epsoide 
+    class="episode"
+    index="{{classicData.index}}"/>
+  <xy-like 
+    class="like"
+    bind:like="onLikeClassic"
+    like="{{classicData.like_status}}"
+    count="{{classicData.fav_nums}}"/>
+</view>
 
 <xy-movie 
   img="{{classicData.image}}"
