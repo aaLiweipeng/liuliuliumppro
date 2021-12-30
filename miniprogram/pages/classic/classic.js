@@ -11,10 +11,14 @@ Page({
 
   /**
    * 页面的初始数据
+   * latest:true 【因为初始页面就是最新一页】
    */
   data: {
-    test: 666 
-  },
+    test: 666,
+    classic:null,
+    latest:true, 
+    first:false 
+  }, 
 
   /**
    * 生命周期函数--监听页面加载
@@ -56,6 +60,16 @@ Page({
     // 调用点赞接口
     likeModel.like(behavior, this.data.classicData.id, 
       this.data.classicData.type)
+  },
+
+  onNaviNext:function(event){
+    console.log('Page Classic onNaviNext --- ', event)
+
+  },
+
+  onNaviPrevious:function(event){
+    console.log('Page Classic onNaviPrevious --- ', event)
+
   },
 
   /**

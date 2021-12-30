@@ -3,7 +3,8 @@
   "usingComponents": {
     "xy-like":"/components/like/index",
     "xy-movie":"/components/classic/movie/movie",
-    "xy-epsoide":"/components/epsoide/index"
+    "xy-epsoide":"/components/epsoide/index",
+    "xy-navi":"/components/navi/navi"
   },
   "enablePullDownRefresh": true,
   "onReachBottomDistance": 50

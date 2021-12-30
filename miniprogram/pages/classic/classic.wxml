@@ -1,5 +1,6 @@
 <!--pages/classic/classic.wxml-->
-<view class="header">
+<view class="classic_container">
+  <view class="header">
   <xy-epsoide 
     class="episode"
     index="{{classicData.index}}"/>
@@ -8,8 +9,17 @@
     bind:like="onLikeClassic"
     like="{{classicData.like_status}}"
     count="{{classicData.fav_nums}}"/>
-</view>
+  </view>
 
-<xy-movie 
-  img="{{classicData.image}}"
-  content="{{classicData.content}}"/>
+  <xy-movie 
+    img="{{classicData.image}}"
+    content="{{classicData.content}}"/>
+
+  <xy-navi 
+    bind:naviLeft="onNaviNext"
+    bind:naviRight="onNaviPrevious"
+    title="{{classicData.title}}"
+    first="{{first}}"
+    latest="{{latest}}"
+    class="navi"/>
+</view>
