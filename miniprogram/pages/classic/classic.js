@@ -2,7 +2,7 @@
 // import { HTTP } from '../../util/http.js'
 // let http = new HTTP()
 
-import { ClassicModel } from '../../models/classic.js'
+import { ClassicModel } from '../../models/classicModel.js'
 import { LikeModel } from '../../models/likeModel.js'
 let classicModel = new ClassicModel()
 let likeModel = new LikeModel()
@@ -30,7 +30,7 @@ Page({
         res);
         
       this.setData({
-        classicData:res
+        classicData:res.data
       })
     })
 
@@ -62,15 +62,47 @@ Page({
       this.data.classicData.type)
   },
 
+  /**
+   * 点击向左导航按钮
+   * @param {*} event 组件通过triggerEvent传递过来的事件
+   */
   onNaviNext:function(event){
-    console.log('Page Classic onNaviNext --- ', event)
-
+    console.log('Page Classic onNaviNext event --- ', event)
+    this._updateClassic('next')
   },
 
   onNaviPrevious:function(event){
-    console.log('Page Classic onNaviPrevious --- ', event)
-
+    console.log('Page Classic onNaviPrevious event --- ', event)
+    this._updateClassic('previous')
   },
+
+  _updateClassic: function (nextOrPrevious) {
+    const index = this.data.classicData.index
+
+    console.log('Page Classic _updateClassic index --- ', index)
+    console.log('Page Classic _updateClassic nextOrPrevious --- ', nextOrPrevious)
+
+    classicModel.getClassic(index, nextOrPrevious, (res) => {
+
+      // this._getLikeStatus(res.id, res.type)
+
+      this.setData({
+        classicData: res.data,
+        latest: classicModel.isLatest(res.data.index),
+        first: classicModel.isFirst(res.data.index)
+      })
+    })
+  },
+
+  // _getLikeStatus: function (artID, category) {
+  //   likeModel.getClassicLikeStatus(artID, category,
+  //     (res) => {
+  //       this.setData({
+  //         likeCount: res.fav_nums,
+  //         likeStatus: res.like_status
+  //       })
+  //     })
+  // },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
