@@ -15,7 +15,7 @@ Page({
    */
   data: {
     test: 666,
-    classic:null,
+    classicData:null,
     latest:true, 
     first:false 
   }, 
@@ -84,6 +84,7 @@ Page({
 
     classicModel.getClassic(index, nextOrPrevious, (res) => {
 
+      // 单独更新点赞消息
       // this._getLikeStatus(res.id, res.type)
 
       this.setData({
