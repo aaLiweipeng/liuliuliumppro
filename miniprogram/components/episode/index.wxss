@@ -1,4 +1,4 @@
-/* components/epsoide/index.wxss */
+/* components/episode/index.wxss */
 
 .container{
   height:60rpx; /* 跟index 的fontsize保持一致 */

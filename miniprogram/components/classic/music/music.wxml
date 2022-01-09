@@ -1,15 +1,23 @@
 <!--components/classic/music/music.wxml-->
-<view hidden="{{hidden}}" class="container" hidden="{{hidden}}" >
+<view 
+    class="container" 
+    hidden="{{hidden}}" >
 
     <!-- 唱片背景图 -->
-    <image class="classic-img {{playing?'rotation':''}}" src="{{img}}" />
+    <image 
+        class="classic-img {{playing?'rotation':''}}" 
+        src="{{img}}" />
 
     <!-- 播放暂停按钮 -->
-    <image class="player-img" bind:tap="onPlay" 
+    <image 
+        class="player-img" 
+        bind:tap="onPlay" 
         src="{{!playing?playSrc:pauseSrc}}" />
 
     <!-- 音乐期刊固定log -->
-    <image class="tag" src="images/music@tag.png" />
+    <image 
+        class="tag" 
+        src="images/music@tag.png" />
 
     <!-- 文本内容 -->
     <text class="content">{{content}}</text>

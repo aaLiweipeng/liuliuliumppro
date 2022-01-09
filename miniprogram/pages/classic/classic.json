@@ -5,7 +5,7 @@
     "xy-movie":"/components/classic/movie/movie",
     "xy-music":"/components/classic/music/music",
     "xy-essay":"/components/classic/essay/essay",
-    "xy-epsoide":"/components/epsoide/index",
+    "xy-episode":"/components/episode/index",
     "xy-navi":"/components/navi/navi"
   },
   "enablePullDownRefresh": true,

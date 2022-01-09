@@ -1,10 +1,10 @@
 <!--pages/classic/classic.wxml-->
 <view class="classic_container">
   <view class="header">
-  <xy-epsoide 
+  <xy-episode 
     class="episode"
     index="{{classicData.index}}"/>
-  <xy-like 
+  <xy-like
     class="like"
     bind:like="onLikeClassic"
     like="{{classicData.like_status}}"
@@ -17,9 +17,11 @@
     content="{{classicData.content}}"/>  
     
   <xy-music
-    hidden="{{classicData.type!=200}}"
+    wx:if="{{classicData.type==200}}"
     img="{{classicData.image}}"
-    content="{{classicData.content}}"/>
+    content="{{classicData.content}}"
+    title="{{classicData.title}}"
+    src="{{classicData.src}}"/>
     
   <xy-essay 
     hidden="{{classicData.type!=300}}"
