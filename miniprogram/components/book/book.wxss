@@ -1,0 +1,59 @@
+/* components/book/book.wxss */
+.container {
+  margin-top: 30rpx;
+  display: flex;
+  position: relative;
+  box-shadow: 2px 2px 3px #e3e3e3; /* 阴影 */
+  flex-direction: column;
+  width: 240rpx;
+  height: 360rpx;
+}
+
+.container image {
+  width: 100%;/* 充满布局 */
+  height: 100%;
+  border-radius: 2px;
+}
+
+.description {
+  box-sizing: border-box;
+  width: 100%;
+  position: absolute;/* 盖于上层 */
+  bottom: 0;/* 置底 */
+  background-color: #fff;/* 设置描述覆盖层的底色！！ */
+  padding: 5rpx 10rpx 8rpx 15rpx;
+  font-size: 24rpx;
+  display: flex;
+  flex-direction: column;
+  border-bottom-right-radius: 2px;/* 左右下方两个圆角 */
+  border-bottom-left-radius: 2px;
+}
+
+.title {
+  margin-top: 10rpx;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.author {
+  font-size: 20rpx;
+  color: #999999;
+  margin-bottom: 10rpx;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+/* 【喜欢】该行样式 */
+.foot {
+  font-size: 20rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;/* 右对齐 */
+}
+
+/* 【喜欢】文本样式 */
+.footer {
+  color: #666666;
+}

@@ -14,7 +14,7 @@ Component({
   behaviors: [classicBeh],
   properties: {
     src: String,
-    title:String
+    title: String
   },
 
   /**
@@ -54,7 +54,7 @@ Component({
 
         console.log("Music.js onPlay Open the music!!")
         console.log("this.properties.src -- ", this.properties.src)
-        
+
         // 设置src成新的音频src就会开始自动播放
         mMgr.src = this.properties.src
         mMgr.title = this.properties.title

@@ -10,7 +10,7 @@ const tips = {
 
 class HTTP {
   request(params){
-
+    
     // 鲁棒性 如果没method，给个默认method
     if(!params.method) {
       params.method = "GET"
