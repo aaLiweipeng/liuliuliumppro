@@ -30,6 +30,8 @@ class HTTP{
             success:(res)=>{
                 const code = res.statusCode.toString()
                 if (code.startsWith('2')){
+                    console.log("request success! url --- " + url)
+                    console.log("res.data --- ", res.data)
                     resolve(res.data)
                 }
                 else{
@@ -39,6 +41,7 @@ class HTTP{
                 }
             },
             fail:(err)=>{
+                console.log("request fail! url --- " + url)
                 reject()
                 this._show_error(1)
             }

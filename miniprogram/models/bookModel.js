@@ -30,6 +30,7 @@ class BookModel extends HTTP {
 
   /**
    * 返回promise
+   * 获取点赞
    */
   getMyBookCount() {
       return this.request({
@@ -42,7 +43,7 @@ class BookModel extends HTTP {
    */
   getDetail(bid) {
       return this.request({
-          url: `book/${bid}/detail`
+          url: `book/detail/${bid}`
       })
   }
 
@@ -51,16 +52,17 @@ class BookModel extends HTTP {
    */
   getLikeStatus(bid) {
       return this.request({
-          url: `/book/${bid}/favor`
+          url: `book/favor/${bid}`
       })
   }
 
   /**
    * 返回promise
+   * 获取短评
    */
   getComments(bid) {
       return this.request({
-          url: `book/${bid}/short_comment`
+          url: `book/short_comment/${bid}`
       })
   }
 

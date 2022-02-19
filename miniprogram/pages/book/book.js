@@ -27,6 +27,7 @@ Page({
     // 拿到所有书籍数据
     bookModel.getHotList()
       .then(res => {
+        console.log('book Page: onLoad books --- ', res)
         this.setData({
           books:res
         })

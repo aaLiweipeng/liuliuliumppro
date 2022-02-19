@@ -27,10 +27,8 @@ Component({
       wx.navigateTo({
         url:`/pages/book-detail/book-detail?bid=${bid}`
       })
-      // 降低了组件的通用性
-      // 非常方便
-      // 服务于当前的项目 项目组件
-      // 
+      // 降低了组件的通用性, 【固定了url，使用方便，通用降低】
+      // 提高业务的专用性, 服务于当前的项目的项目组件，使用方便
     }
   }
 })
