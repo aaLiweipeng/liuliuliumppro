@@ -43,10 +43,10 @@
 
 /* 区块统一父布局 */
 .sub-container {
-  width: 690rpx;
+  width: 690rpx; /* 定宽 */
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: center;/* 居中 */
   margin-top: 30rpx;
   background-color: #fff;
   padding: 30rpx;
@@ -60,34 +60,37 @@
   margin-bottom: 20rpx;
 }
 
+/* 短评框架 */
 .comment-container {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
 }
 
-.comment-container v-tag {
+/* 嵌套样式，给标签加上间距 */
+.comment-container xy-tag {
   margin-right: 15rpx;
   margin-bottom: 10rpx;
 }
 
 /* 内容介绍 内容 */
 .content {
-  text-indent: 58rpx;
+  text-indent: 58rpx;/* 段头（p/text标签）缩进 */
   font-weight: 500;
 }
 
+/* 短评标签tagView 尾部的数字样式 */
 .num {
   margin-left: 10rpx;
   font-size: 22rpx;
   color: #aaa;
 }
 
-/* .comment-container>v-tag:nth-child(1)>view {
+/* .comment-container>xy-tag:nth-child(1)>view {
   background-color: #fffbdd;
 }
 
-.comment-container>v-tag:nth-child(2)>view {
+.comment-container>xy-tag:nth-child(2)>view {
   background-color: #eefbff;
 } */
 .ex-tag1 {

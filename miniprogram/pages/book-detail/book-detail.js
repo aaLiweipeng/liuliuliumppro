@@ -35,15 +35,15 @@ Page({
     Promise.all([detail, comments, likeStatus])
       .then(res => {
         this.setData({
-          book: res[0],
-          comments: res[1].comment,
+          book: res[0].data,
+          comments: res[1].data.comment,
           likeStatus: res[2].like_status,
           likeCount: res[2].fav_nums
         })
         console.log("Page book-detail onLoad bid -- ", bid
-        , "\nbook --- ", res[0]
-        , "\ncomments --- ", res[1].data.comment
-        , "\nlikeStatus --- ", res[2].like_status)
+        , "\nbook --- ", this.data.book
+        , "\ncomments --- ", this.data.comments
+        , "\nlikeStatus --- ", this.data.likeStatus)
         
         wx.hideLoading()
       })

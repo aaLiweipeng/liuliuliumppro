@@ -2,7 +2,10 @@ var format = function(text){
     if(!text){
         return
     }
+    /* 匹配 \\n 成 \n ，再给所有\n换行后加缩进*/
     var reg = getRegExp('\\\\n','g')
+    text = text.replace(reg, '\n')
+    reg = getRegExp('\\n','g')
     return text.replace(reg, '\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;')
 }
 

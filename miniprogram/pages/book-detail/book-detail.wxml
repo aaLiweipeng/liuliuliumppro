@@ -15,9 +15,10 @@
          <text class="shadow" wx:if="{{comments==false}}">还没有短评</text>
         <view class="comment-container">
             <block wx:for="{{util.limit(comments, 10)}}" wx:key="content">
-                <v-tag tag-class="{{tool.highlight(index)}}" text="{{item.content}}">
+                <xy-tag tag-class="{{tool.highlight(index)}}" text="{{item.content}}">
+                    <!-- 插槽注入 -->
                     <text class="num" slot="after">{{'+'+item.nums}}</text>
-                </v-tag>
+                </xy-tag>
             </block>
         </view>
     </view>
@@ -67,9 +68,11 @@
     </view>
     <view class="comment-container">
         <block wx:for="{{util.limit(comments, 3)}}" wx:key="content">
-            <v-tag bind:tapping="onPost" tag-class="{{tool.highlight(index)}}" text="{{item.content}}">
+            <!-- 监听tapping -->
+            <xy-tag bind:tapping="onPost" tag-class="{{tool.highlight(index)}}" text="{{item.content}}">
+                                                                                    <!-- 插槽注入 -->
                 <text class="num" slot="after">{{'+'+item.nums}}</text>
-            </v-tag>
+            </xy-tag>
         </block>
     </view>
     <input bindconfirm="onPost" class="post" placeholder='短评最多12个字'></input>

@@ -1,0 +1,9 @@
+<!--components/tag/tag.wxml-->
+<view bind:tap="onTap" class="container tag-class ">
+    <!-- 暴露插槽，文本内容一个字段即可 -->
+    <slot name="before"></slot>
+    <text >{{text}}</text>
+    <slot name="after"></slot>
+</view>
+
+<!-- 普通样式 外部样式 -->
